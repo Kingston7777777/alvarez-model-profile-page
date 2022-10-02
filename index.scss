@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin: 0px 5px;
+    padding: 0px;
+
+    body{
+        font-family: sans-serif;
+    }
+}
+span{
+    color: red;
+}
+.container{
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 7%;
+    align-items: center;
+
+    &_logo{
+        font-size: 4vw;
+    }
+    &_menu{
+        display: flex;
+        flex-direction: row;
+        font-size: 2.5vw;
+        gap: 15px;
+    }
+}
+
+.main{
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+
+    &_image{
+        background-image: url("./Alvarez.png");
+        width: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+    }
+    &_text{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &-1{
+            font-size: 10vw;
+        }
+        &-2,&-3,&-4{
+            font-size: 5vw;
+        }
+    }
+}
+
+.footer{
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+    margin-right: 10%;
+
+    [class^="footer_"]{
+        img{
+            width: 5.3vw;
+        }
+    }
+
+    a{
+        cursor: pointer;
+    }
+}
+@media (max-width : 650px){
+    .header{
+        justify-content: center;
+
+    &_logo{
+        font-size: 40px;
+    }
+
+    &_menu{
+        display: none;
+    }
+
+
+    }
+    .main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &_image{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            background-size: 100%;
+            background-position: center;
+        }
+        &_text{
+            width: 100%;
+            &-1{
+                display: none;
+            }
+            &-2,&-3,&-4{
+                font-size: 30px;
+            }
+        }
+    }
+
+    .footer{
+        justify-content: center;
+        margin: 0px;
+       [class^="footer_"]{
+        img{
+          width: 45px; 
+          height: 45px; 
+        }
+       }
+    }
+}
